@@ -1,0 +1,27 @@
+@use "../../styles/mixins" as m;
+
+.home {
+  background-color: #f4f4f5;
+
+  .container {
+    columns: 3;
+    max-width: 1200px;
+    margin: auto;
+
+    @include m.xl {
+      max-width: 992px;
+    }
+
+    @include m.lg {
+      max-width: 768px;
+    }
+
+    @include m.md {
+      max-width: 576px;
+    }
+
+    @include m.sm {
+      width: 100%;
+    }
+  }
+}
