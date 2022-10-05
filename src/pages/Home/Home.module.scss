@@ -1,7 +1,8 @@
 @use "../../styles/mixins" as m;
+@use "../../styles/variables" as v;
 
 .home {
-  background-color: #f4f4f5;
+  background-color: v.$off-white;
 
   .container {
     columns: 3;
@@ -13,10 +14,12 @@
     }
 
     @include m.lg {
+      columns: 2;
       max-width: 768px;
     }
 
     @include m.md {
+      columns: 1;
       max-width: 576px;
     }
 

@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as m;
+
 .card {
   margin-bottom: 1rem;
   border-radius: 0.75rem;
@@ -38,6 +40,10 @@
         font-size: 1.25rem;
         font-weight: bold;
         line-height: 1.4;
+
+        @include m.md {
+          font-size: 1.125rem;
+        }
       }
 
       .text {
