@@ -1,0 +1,32 @@
+@use "../../styles/variables" as v;
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 1rem;
+  row-gap: 1rem;
+
+  .errorCode {
+    font-weight: 600;
+    color: v.$purple;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-weight: bold;
+  }
+
+  .message {
+    opacity: 0.9;
+  }
+
+  .back {
+    margin-top: 2rem;
+    color: v.$purple;
+  }
+}
