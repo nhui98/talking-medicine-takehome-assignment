@@ -1,6 +1,5 @@
 import Spinner from "@components/common/Spinner/Spinner";
 import PostCard from "@components/home/PostCard/PostCard";
-import Fade from "@components/utils/Fade";
 import { useEffect, useState } from "react";
 import FetchReddit, { RedditApiResponse } from "src/api/fetchReddit";
 

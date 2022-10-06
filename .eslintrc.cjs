@@ -30,10 +30,22 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
   ],
-  plugins: ["react", "@typescript-eslint", "simple-import-sort", "prettier"],
-  overrides: [],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "testing-library",
+    "prettier",
+  ],
+  overrides: [
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"],
+    },
+  ],
   rules: {
     "prettier/prettier": [
       "error",
