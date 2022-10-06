@@ -1,3 +1,4 @@
+import Spinner from "@components/common/Spinner/Spinner";
 import PostCard from "@components/home/PostCard/PostCard";
 import { useEffect, useState } from "react";
 import FetchReddit, { RedditApiResponse } from "src/api/fetchReddit";
@@ -28,7 +29,12 @@ const Home = () => {
     getData();
   }, []);
 
-  if (loading) return <h1>Loading</h1>;
+  if (loading)
+    return (
+      <div style={{ height: "100vh" }}>
+        <Spinner />
+      </div>
+    );
 
   if (error) return <h1>Error</h1>;
 
